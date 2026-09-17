@@ -11,7 +11,14 @@ config_version=5
 [application]
 
 config/name="Nouveau projet de jeu"
+run/main_scene="uid://8dogigr78ho6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

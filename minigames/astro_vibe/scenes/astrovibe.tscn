@@ -1,17 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://8dogigr78ho6"]
 
-[ext_resource type="Script" uid="uid://ycmqv1ids7jc" path="res://scripts/jeu_principal.gd" id="1_vjl25"]
-[ext_resource type="Texture2D" uid="uid://dbsaojgu4wkur" path="res://assets/espace_ciel.png" id="2_ii1sd"]
-[ext_resource type="Texture2D" uid="uid://1xotklk7m386" path="res://assets/lune.png" id="3_5ou5p"]
-[ext_resource type="Texture2D" uid="uid://dx4i7jwmk788u" path="res://assets/lunette_viseur.png" id="4_yltuk"]
-[ext_resource type="Script" uid="uid://dw477lmg0h8sb" path="res://scripts/sprite_viseur.gd" id="5_nleml"]
+[ext_resource type="Script" uid="uid://ycmqv1ids7jc" path="res://minigames/astro_vibe/scripts/jeu_principal.gd" id="1_vjl25"]
+[ext_resource type="Texture2D" uid="uid://cayss7wwma4ag" path="res://minigames/astro_vibe/assets/espace_ciel.png" id="2_t04l2"]
+[ext_resource type="Texture2D" uid="uid://1xotklk7m386" path="res://minigames/astro_vibe/assets/lune.png" id="3_5ou5p"]
+[ext_resource type="Texture2D" uid="uid://dx4i7jwmk788u" path="res://minigames/astro_vibe/assets/lunette_viseur.png" id="4_yltuk"]
+[ext_resource type="Script" uid="uid://dw477lmg0h8sb" path="res://minigames/astro_vibe/scripts/sprite_viseur.gd" id="5_nleml"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_vjl25")
 
 [node name="sprite_ciel" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
-texture = ExtResource("2_ii1sd")
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_t04l2")
 
 [node name="sprite_lune" type="Sprite2D" parent="."]
 position = Vector2(1081, 127)
@@ -23,21 +24,26 @@ texture = ExtResource("4_yltuk")
 script = ExtResource("5_nleml")
 
 [node name="ChronoLabel" type="Label" parent="."]
-offset_right = 223.0
-offset_bottom = 114.0
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 50.0
 
-[node name="VictoireLabel" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 246.00003
-offset_top = 492.0
-offset_right = 806.0
-offset_bottom = 552.6667
+[node name="ConteneurVictoire" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.5, 1.5)
-text = "Gagné !"
-autowrap_mode = 2
+
+[node name="VictoireLabel" type="Label" parent="ConteneurVictoire"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConsigneLabel" type="Label" parent="ConteneurVictoire"]
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
