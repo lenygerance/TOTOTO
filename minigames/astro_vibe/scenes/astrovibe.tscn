@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://8dogigr78ho6"]
+[gd_scene load_steps=7 format=3 uid="uid://8dogigr78ho6"]
 
 [ext_resource type="Script" uid="uid://ycmqv1ids7jc" path="res://minigames/astro_vibe/scripts/jeu_principal.gd" id="1_vjl25"]
 [ext_resource type="Texture2D" uid="uid://cayss7wwma4ag" path="res://minigames/astro_vibe/assets/espace_ciel.png" id="2_t04l2"]
 [ext_resource type="Texture2D" uid="uid://1xotklk7m386" path="res://minigames/astro_vibe/assets/lune.png" id="3_5ou5p"]
 [ext_resource type="Texture2D" uid="uid://dx4i7jwmk788u" path="res://minigames/astro_vibe/assets/lunette_viseur.png" id="4_yltuk"]
 [ext_resource type="Script" uid="uid://dw477lmg0h8sb" path="res://minigames/astro_vibe/scripts/sprite_viseur.gd" id="5_nleml"]
+[ext_resource type="AudioStream" uid="uid://0vkfgikp23gu" path="res://minigames/astro_vibe/music/Sonic Colors music - Green Hover reversed.ogg" id="6_6k6lr"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_vjl25")
@@ -52,3 +53,7 @@ vertical_alignment = 1
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6k6lr")
+autoplay = true
